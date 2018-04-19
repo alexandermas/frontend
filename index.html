@@ -1,1 +1,307 @@
+﻿<!DOCTYPE html>
+<html  ng-controller="main_ctl" ng-app='xcms'>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf8"/>
+
+    <link async href="css/bootstrap.css" rel="stylesheet">
+    <link  href="css/dir_styles.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+    <script defer src="js/main.js"></script>
+
+
+<body>
+
+
+
+<div class="header">
+    <!-- верхнее меню -->
+    <top-menu data = '[{"label":"Профиль"},{"label":"Документы"},{"label":"Транзакции"},{"label":"Отчеты"},{"label":"Справочники"}]'></top-menu>
+</div>
+
+
+<div class="container">
+    <div class="row" >
+        <div class="col-md-3" style="padding-top: 0px;"> <h1>План счетов</h1></div>
+        <div class="col-md-2"><span class = 'button round outline'>Добавить<a icon = 'calendar' ></a></span></div>
+        <div class="col-md-4">
+            <div class = 'round outline shadow'>
+                <a icon = 'search'></a>
+                <input  style="width: 90%" placeholder = 'Искать по номеру или названию' ></input>
+            </div>
+        </div>
+        <div class="col-md-2"><span class = 'button round'>Расширеный поиск<a icon = 'search' ></a></span></div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-3"><h2>Расширеный поиск</h2></div>
+        <div class="col-md-2"><span class = 'button round'>Сохранить<a icon = 'calendar' ></a></span></div>
+        <div class="col-md-2"><span class = 'button round outline'>Мой поиск 1<a icon = 'calendar' ></a></span></div>
+        <div class="col-md-2"><span class = 'button round outline'>Мой поиск 2<a icon = 'calendar' ></a></span></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2"><a icon = 'search' ></a></div>
+    </div>
+    <hr>
+    <div class="row">
+
+        <div class = 'input_container col-md-3'>
+            <label class = 'input_name'>Тип счета</label>
+            <label class = 'input_top_label'>Выберите из списка</label>
+            <div>
+                <input class = 'input_in_block' placeholder="Все">
+                <label class = 'input_icon'>&nbsp;</label>
+                </input>
+            </div>
+            <label class = 'input_bottom_label'></label>
+        </div>
+
+
+        <div class = 'input_container col-md-3'>
+            <label class = 'input_name'>Вид счета</label>
+            <label class = 'input_top_label'>Выберите из списка</label>
+            <div>
+                <input class = 'input_in_block' placeholder="Все">
+                <label class = 'input_icon'>&nbsp;</label>
+                </input>
+            </div>
+            <label class = 'input_bottom_label'></label>
+        </div>
+
+
+        <div class = 'input_container col-md-3'>
+            <label class = 'input_name'>Счет взаиморасчетов</label>
+            <label class = 'input_top_label'>Выберите из списка</label>
+            <div>
+                <input class = 'input_in_block' placeholder="Все">
+                <label class = 'input_icon'>&nbsp;</label>
+                </input>
+            </div>
+            <label class = 'input_bottom_label'></label>
+        </div>
+
+
+        <div class = 'input_container col-md-3'>
+            <label class = 'input_name'>Счет является группой</label>
+            <label class = 'input_top_label'>И не выбирается в проводках</label>
+            <div>
+                <input class = 'input_in_block' placeholder="Да">
+                <label class = 'input_icon'>&nbsp;</label>
+                </input>
+            </div>
+            <label class = 'input_bottom_label'></label>
+        </div>
+
+    </div>
+    <div class="row">
+
+        <div class = 'input_container col-md-3'>
+            <label class = 'input_name'>Подчинен групповому счету</label>
+            <label class = 'input_top_label'>Введите нормера счетов через (,)</label>
+            <div>
+                <input class = 'input_in_block' placeholder="90.58">
+                <label class = 'input_icon'>&nbsp;</label>
+                </input>
+            </div>
+            <label class = 'input_bottom_label'>Или интервал счетов через (-)</label>
+        </div>
+
+
+        <div class = 'input_container col-md-3'>
+            <label class = 'input_name'>Группа контрагентов</label>
+            <label class = 'input_top_label'>Выберите из списка</label>
+            <div>
+                <input class = 'input_in_block' placeholder="Все">
+                <label class = 'input_icon'>&nbsp;</label>
+                </input>
+            </div>
+            <label class = 'input_bottom_label'>Кликните по иконке выбора</label>
+        </div>
+
+
+        <div class = 'input_container col-md-3'>
+            <label class = 'input_name'>Статус</label>
+            <label class = 'input_top_label'>Выберите из списка</label>
+            <div>
+                <input class = 'input_in_block' placeholder="Действующий">
+                <label class = 'input_icon'>&nbsp;</label>
+                </input>
+            </div>
+            <label class = 'input_bottom_label'></label>
+        </div>
+
+
+        <div class = 'input_container col-md-3'>
+            <label class = 'input_name'>Автор</label>
+            <label class = 'input_top_label'>Выберите из списка</label>
+            <div>
+                <input class = 'input_in_block' placeholder="Все">
+                <label class = 'input_icon'>&nbsp;</label>
+                </input>
+            </div>
+            <label class = 'input_bottom_label'></label>
+        </div>
+
+    </div>
+    <div class="row">
+
+        <div class = 'input_container col-md-4'>
+            <label class = 'input_name'>Рабочая группа</label>
+            <label class = 'input_top_label'>Выберите из списка</label>
+            <div>
+                <input class = 'input_in_block' placeholder="Все">
+                <label class = 'input_icon'>&nbsp;</label>
+                </input>
+            </div>
+            <label class = 'input_bottom_label'>Кликните по иконке выбора</label>
+        </div>
+
+        <div class = 'input_container col-md-4'>
+            <label class = 'input_name'>Роли контрагентов</label>
+            <label class = 'input_top_label'>Выберите из списка</label>
+            <div>
+                <input class = 'input_in_block' placeholder="Все">
+                <label class = 'input_icon'>&nbsp;</label>
+                </input>
+            </div>
+            <label class = 'input_bottom_label'>Кликните по иконке выбора</label>
+        </div>
+
+
+        <div class = 'input_container col-md-4'>
+            <label class = 'input_name'>Аналитические срезы</label>
+            <label class = 'input_top_label'>Выберите из списка</label>
+            <div>
+                <input class = 'input_in_block' placeholder="Все">
+                <label class = 'input_icon'>&nbsp;</label>
+                </input>
+            </div>
+            <label class = 'input_bottom_label'>Кликните по иконке выбора</label>
+
+        </div>
+
+    </div>
+
+
+    <div style="padding-top: 20px;" class="row">
+        <div class="col-md-10"></div>
+        <span  class="button round outline"><a icon="trash"></a>Очистить</span>
+        <span  class="button round"><a icon="search"></a>Искать</span>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-2"><span class="button outline">Номер<a icon = 'arrow' ></a></span></div>
+        <div class="col-md-2"><span class="button outline">Организация (12)<a icon = 'arrow' ></a></span></div>
+        <div class="col-md-2"><span class="button outline">Статус<a icon = 'arrow' ></a></span></div>
+        <div class="col-md-3"><span class="button outline">Последние измененния<a icon = 'arrow' ></a></span></div>
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+            <div>
+                <i style="color: var(--lightish-blue);" class="fas fa-caret-left"></i>
+                <span class = 'pangation_wide'>Показано 1-20 из 36</span>
+                <i style="color: var(--lightish-blue);" class="fas fa-caret-right"></i>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-3"><span class = 'button round'><a icon = 'calendar' ></a>Добавить представление</span></div>
+        <div class="col-md-2"><span class = 'button round outline'>Мой 1<a icon = 'calendar' ></a></span></div>
+        <div class="col-md-2"><span class = 'button round outline'>По автору<a icon = 'calendar' ></a></span></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2"><a icon = 'search' ></a></div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-pull-12">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>
+                        <label>
+                            <input class="check" type="checkbox">
+                            <span class="check-custom"></span>
+                            <span class="check-label"></span>
+                        </label>
+                    </th>
+                    <th>Имя</th>
+                    <th>Фамимлия</th>
+                    <th>@логин</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <label>
+                            <input class="check" type="checkbox">
+                            <span class="check-custom"></span>
+                            <span class="check-label"></span>
+                        </label>
+                    </td>
+                    <td>Алексей</td>
+                    <td>Алексеев</td>
+                    <td>@alex</td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            <input class="check" type="checkbox">
+                            <span class="check-custom"></span>
+                            <span class="check-label"></span>
+                        </label>
+                    </td>
+                    <td>Владислав</td>
+                    <td>Переславль-Залесский</td>
+                    <td>@vlad</td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            <input class="check" type="checkbox">
+                            <span class="check-custom"></span>
+                            <span class="check-label"></span>
+                        </label>
+                    </td>
+                    <td>Константин</td>
+                    <td>Константинов</td>
+                    <td>@konst</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div>
+                <span class = 'pangation'><</span>
+                <span class = 'pangation'>1</span>
+                <span class = 'pangation'>2</span>
+                <span style="padding-right: 3px; padding-left: 3px;">...</span>
+                <span class = 'pangation_wide'>25 из 1200</span>
+                <span class = 'pangation'>16</span>
+                <span class = 'pangation'> > </span>
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+    <div class="row">
+        <br>
+        <br>
+        <hr>
+    </div>
+</div>
+</div>
+
+<div class="row">
+
+    <input-block class = "col-md-3" data = '{ "topLabel" : "topLabel" ,  "bottomLabel" : "bottomLabel" ,  "help" : "help"}'></input-block>
+    <input-block class = "col-md-3"  data = '{ "topLabel" : "topLabel1" ,  "bottomLabel" : "bottomLabel" ,  "help" : "help"}'></input-block>
+</div>
+
+</body>
+</html>
 
