@@ -55,6 +55,7 @@ input + label {
 
 /* button */
 .button{
+    display: inline-block;
     font-weight: 700;
     color:            #fbfbfb;
     padding-left: 5px;
@@ -78,7 +79,7 @@ input + label {
 }
 
 
-a[icon = 'search']:after{
+a[icon = 'search']:before{
     color: black;
     font-family: FontAwesome;
     content: " \f002";
@@ -87,57 +88,57 @@ a[icon = 'search']:after{
 
 
 
-a[icon = 'arrow']:after{
-    color: white;
+a[icon = 'arrow']:before{
+
     font-family: FontAwesome;
     padding-right:5px;
     content: " \f068";
 }
 
-a[icon = 'calendar']:after{
-    color: white;
+a[icon = 'calendar']:before{
+
     font-family: FontAwesome;
     padding-right:5px;
     content: " \f073";
 }
 
-a[icon = 'plus']:after{
-    color: white;
+a[icon = 'plus']:before{
+
     font-family: FontAwesome;
     padding-right:5px;
     content: " \f067";
 }
 
-a[icon = 'minus']:after{
-    color: white;
+a[icon = 'minus']:before{
+
     font-family: FontAwesome;
     padding-right:5px;
     content: " \f068";
 }
 
-a[icon = 'edit']:after{
-    color: white;
+a[icon = 'edit']:before{
+
     font-family: FontAwesome;
     padding-right:5px;
     content: " \f303";
 }
 
-a[icon = 'flag']:after{
-    color: white;
+a[icon = 'flag']:before{
+
     font-family: FontAwesome;
     padding-right:5px;
     content: " \f024";
 }
 
-a[icon = 'trash']:after{
-    color: white;
+a[icon = 'trash']:before{
+
     font-family: FontAwesome;
     padding-right:5px;
     content: " \f1f8";
 }
 
-a[icon = 'print']:after{
-    color: white;
+a[icon = 'print']:before{
+
     font-family: FontAwesome;
     padding-right:5px;
     content: " \f02f";
@@ -389,3 +390,5 @@ menu.menu_main input{
     box-shadow: -2rem 2rem 2rem var(--black);
     visibility: hidden;
 }
+
+
