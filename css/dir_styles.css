@@ -60,6 +60,7 @@ input + label {
     padding-left: 5px;
     padding-right: 5px;
     transition: 0.2s;
+    display: inline-block;
     background-color: #4b74ff;
     border: solid 1px #4b74ff;
 
