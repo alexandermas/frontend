@@ -37,7 +37,6 @@ function init(){
                     // hide
                     document.body.removeChild(el);
                 }
-
                 el.classList.remove(settings.show_animate);
                 el.classList.remove(settings.hide_animate);
 
