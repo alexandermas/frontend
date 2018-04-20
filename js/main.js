@@ -2,10 +2,15 @@
 var wnd_last = null;
 var screen = document.getElementsByTagName("top-menu")[0];
 var nodes  = document.querySelectorAll(".screen");
-
+/*
 var settings = {
     show_animate:'pt-page-scaleUp',
     hide_animate:'pt-page-scaleDown'
+};
+*/
+var settings = {
+    show_animate:'pt-page-moveFromTop',
+    hide_animate:'pt-page-moveToTop'
 };
 
 function init(){
@@ -27,20 +32,19 @@ function init(){
 
                 if(el.classList.contains(settings.show_animate)){
                     // show
-                    el.classList.remove(settings.show_animate);
-                    console.log('show');
+
                 }else{
                     // hide
-                    el.classList.remove(settings.hide_animate);
                     document.body.removeChild(el);
-                    console.log('hide');
                 }
 
+                el.classList.remove(settings.show_animate);
+                el.classList.remove(settings.hide_animate);
 
             });
         });
 
-    },1000);
+    },1);
 
 }
 
@@ -135,7 +139,7 @@ function input_block(element){
                        "<label class = 'input_top_label'>" + data.help + "</label>" +
                        "<input class = 'input_in_block'></input> "+
                        "<label class = 'input_bottom_label'>" + data.bottomLabel + "</label> </div>";
-            console.log(html);
+
             element.innerHTML = html;
 
            // _input_block = element;
