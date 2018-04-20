@@ -1,19 +1,12 @@
 ﻿var wnd = document.querySelectorAll(".wnd_modal")[0];
 var wnd_last = null;
-
-
 var screen = document.getElementsByTagName("top-menu")[0];
-var nodes = {};
-
+var nodes  = document.querySelectorAll(".screen");
 
 var settings = {
     show_animate:'pt-page-scaleUp',
     hide_animate:'pt-page-scaleDown'
 };
-
-
-
-
 
 function init(){
     /* animations */
@@ -24,29 +17,22 @@ function init(){
         'animation' : 'animationend'
     };
     var evt_name = animEndEventNames[ Modernizr.prefixed( 'animation' ) ];
-    var screens = document.querySelectorAll(".screen");
 
-    nodes = screens;
 
     setTimeout(function () {
-        screens.forEach(function (item, i, arr){
-
+        nodes.forEach(function (item, i, arr){
             document.body.removeChild(item);
-
             item.addEventListener(evt_name, function (event) {
                 var el = event.target;
 
                 if(el.classList.contains(settings.show_animate)){
                     // show
                     el.classList.remove(settings.show_animate);
-                    el.style.position = 'relative';
                     console.log('show');
                 }else{
                     // hide
                     el.classList.remove(settings.hide_animate);
-
                     document.body.removeChild(el);
-
                     console.log('hide');
                 }
 
@@ -55,8 +41,6 @@ function init(){
         });
 
     },1000);
-
-
 
 }
 
@@ -100,10 +84,7 @@ function show_screen(name) {
         wnd_last.classList.add(settings.hide_animate);
     }
     // showing called screen
-
     cur_wnd.style.visibility = 'visible';
-    cur_wnd.classList.remove(settings.hide_animate);
-
     cur_wnd.classList.add(settings.show_animate);
     document.body.appendChild(cur_wnd);
 
@@ -173,7 +154,7 @@ function input_block(element){
     observer.observe(element, xxx);
     time = performance.now() - time;
   //  console.log('Время выполнения = ', time);
-  //  console.log(screen);
+
 }
 
 
