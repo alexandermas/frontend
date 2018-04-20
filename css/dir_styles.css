@@ -299,7 +299,7 @@ menu.menu_main input{
     font-family: inherit;
     width:       100%;
     font-size:   10px;
-    margin-bottom: 20px;
+   /* margin-bottom: 20px;*/
     color:#4b74ff;
     opacity: 0.8;
 }

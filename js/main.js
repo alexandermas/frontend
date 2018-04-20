@@ -130,16 +130,15 @@ function input_block(element){
 
     if(_input_block == null) {
 
-            var html = [];
-                html.push("<div   class = 'input_container'>");
-                html.push("<label class = 'input_name'>" + data.topLabel + "</label>");
-                html.push("<label class = 'input_top_label'>" + data.help + "</label>");
-                html.push("<input class = 'input_in_block'></input> ");
-                html.push("<label class = 'input_bottom_label'>" + data.bottomLabel + "</label> </div>");
+            var html = "<div   class = 'input_container'>" +
+                       "<label class = 'input_name'>" + data.topLabel + "</label>" +
+                       "<label class = 'input_top_label'>" + data.help + "</label>" +
+                       "<input class = 'input_in_block'></input> "+
+                       "<label class = 'input_bottom_label'>" + data.bottomLabel + "</label> </div>";
+            console.log(html);
+            element.innerHTML = html;
 
-            element.innerHTML = html.join('');
-
-            _input_block = element;
+           // _input_block = element;
 
     } else{
         var clone =  _input_block.cloneNode(true);
