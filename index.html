@@ -6,11 +6,15 @@
 
     <link async href="css/bootstrap.css" rel="stylesheet">
     <link  href="css/dir_styles.css" rel="stylesheet">
+    <link  href="css/animations.css" rel="stylesheet">
+
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
 
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+    <script defer src="js/prop.js"></script>
     <script defer src="js/main.js"></script>
+
 
 
 <body>
@@ -19,11 +23,36 @@
 
 <div class="header">
     <!-- верхнее меню -->
-    <top-menu data = '[{"label":"Профиль"},{"label":"Документы"},{"label":"Транзакции"},{"label":"Отчеты"},{"label":"Справочники"}]'></top-menu>
+    <top-menu data = '[
+                       {"label":"Профиль","sysName":"top_menu_profile"},
+                       {"label":"Документы","sysName":"top_menu_documents"},
+                       {"label":"Транзакции","sysName":"top_menu_transactions"},
+                       {"label":"Отчеты","sysName":"top_menu_reports"},
+                       {"label":"Справочники","sysName":"top_menu_note"}
+                       ]'></top-menu>
 </div>
 
 
-<div class="container">
+<div class="container screen" sys_name = 'top_menu_profile'>
+    another screen1
+</div>
+
+
+<div class="container screen" sys_name = 'top_menu_documents'>
+    another screen2
+</div>
+
+
+<div class="container screen" sys_name = 'top_menu_transactions'>
+    another screen3
+</div>
+
+<div class="container screen" sys_name = 'top_menu_note'>
+    another screen3
+</div>
+
+
+<div class="container screen top_menu" sys_name = 'top_menu_reports'>
     <div class="row" >
         <div class="col-md-3" style="padding-top: 0px;"> <h1>План счетов</h1></div>
         <div class="col-md-2"><span class = 'button round outline'>Добавить<a  icon = 'calendar' ></a></span></div>
@@ -33,7 +62,7 @@
                 <input  style="width: 90%" placeholder = 'Искать по номеру или названию' ></input>
             </div>
         </div>
-        <div class="col-md-2"><span class = 'button round'>Расширеный поиск<a icon = 'search' ></a></span></div>
+        <div class="col-md-3"><span class = 'button round'>Расширеный поиск<a icon = 'search' ></a></span></div>
     </div>
     <hr>
     <div class="row">
@@ -53,149 +82,75 @@
     <hr>
     <div class="row">
 
-        <div class = 'input_container col-md-3'>
-            <label class = 'input_name'>Тип счета</label>
-            <label class = 'input_top_label'>Выберите из списка</label>
-            <div>
-                <input class = 'input_in_block' placeholder="Все">
-                <label class = 'input_icon'>&nbsp;</label>
-                </input>
-            </div>
-            <label class = 'input_bottom_label'></label>
-        </div>
 
+        <input-block class = "input_container col-md-3" data = '{ "topLabel"   : "Тип счета" ,
+                                                                  "bottomLabel":"",
+                                                                  "help"       : "Выберите из списка"}'/>
 
-        <div class = 'input_container col-md-3'>
-            <label class = 'input_name'>Вид счета</label>
-            <label class = 'input_top_label'>Выберите из списка</label>
-            <div>
-                <input class = 'input_in_block' placeholder="Все">
-                <label class = 'input_icon'>&nbsp;</label>
-                </input>
-            </div>
-            <label class = 'input_bottom_label'></label>
-        </div>
+        </input-block>
 
+        <input-block class = "input_container col-md-3" data = '{ "topLabel"   : "Вид счета" ,
+                                                                  "bottomLabel":"",
+                                                                  "help"       : "Выберите из списка"}'>
+        </input-block>
 
-        <div class = 'input_container col-md-3'>
-            <label class = 'input_name'>Счет взаиморасчетов</label>
-            <label class = 'input_top_label'>Выберите из списка</label>
-            <div>
-                <input class = 'input_in_block' placeholder="Все">
-                <label class = 'input_icon'>&nbsp;</label>
-                </input>
-            </div>
-            <label class = 'input_bottom_label'></label>
-        </div>
+        <input-block class = "input_container col-md-3" data = '{ "topLabel"   : "Счет взаиморасчетов" ,
+                                                                  "bottomLabel":"",
+                                                                  "help"       : "Выберите из списка"}'>
+        </input-block>
 
+        <input-block class = "input_container col-md-3" data = '{ "topLabel"   : "Счет является группой" ,
+                                                                  "bottomLabel":"",
+                                                                  "help"       : "не выбирается в проводках"}'>
+        </input-block>
 
-        <div class = 'input_container col-md-3'>
-            <label class = 'input_name'>Счет является группой</label>
-            <label class = 'input_top_label'>И не выбирается в проводках</label>
-            <div>
-                <input class = 'input_in_block' placeholder="Да">
-                <label class = 'input_icon'>&nbsp;</label>
-                </input>
-            </div>
-            <label class = 'input_bottom_label'></label>
-        </div>
+        <input-block class = "input_container col-md-3" data = '{ "topLabel"   : "Подчинен групповому счету" ,
+                                                                  "bottomLabel": "Введите нормера счетов через (,)",
+                                                                  "help"       : "Или интервал счетов через (-)"}'>
+        </input-block>
 
+        <input-block class = "input_container col-md-3" data = '{ "topLabel"   : "Группа контрагентов" ,
+                                                                  "bottomLabel": "Кликните по иконке выбора",
+                                                                  "help"       : "Выберите из списка"}'>
+        </input-block>
+
+        <input-block class = "input_container col-md-3" data = '{ "topLabel"   : "Статус" ,
+                                                                  "bottomLabel": "",
+                                                                  "help"       : "Выберите из списка"}'>
+        </input-block>
+
+        <input-block class = "input_container col-md-3" data = '{ "topLabel"   : "Автор" ,
+                                                                  "bottomLabel": "",
+                                                                  "help"       : "Выберите из списка"}'>
+        </input-block>
     </div>
     <div class="row">
 
-        <div class = 'input_container col-md-3'>
-            <label class = 'input_name'>Подчинен групповому счету</label>
-            <label class = 'input_top_label'>Введите нормера счетов через (,)</label>
-            <div>
-                <input class = 'input_in_block' placeholder="90.58">
-                <label class = 'input_icon'>&nbsp;</label>
-                </input>
-            </div>
-            <label class = 'input_bottom_label'>Или интервал счетов через (-)</label>
-        </div>
+        <input-block class = "input_container col-md-4" data = '{ "topLabel"   : "Рабочая группа" ,
+                                                                  "bottomLabel": "Кликните по иконке выбора",
+                                                                  "help"       : "Выберите из списка"}'>
+        </input-block>
 
+        <input-block class = "input_container col-md-4" data = '{ "topLabel"   : "Роли контрагентов" ,
+                                                                  "bottomLabel": "Кликните по иконке выбора",
+                                                                  "help"       : "Выберите из списка"}'>
+        </input-block>
 
-        <div class = 'input_container col-md-3'>
-            <label class = 'input_name'>Группа контрагентов</label>
-            <label class = 'input_top_label'>Выберите из списка</label>
-            <div>
-                <input class = 'input_in_block' placeholder="Все">
-                <label class = 'input_icon'>&nbsp;</label>
-                </input>
-            </div>
-            <label class = 'input_bottom_label'>Кликните по иконке выбора</label>
-        </div>
+        <input-block class = "input_container col-md-4" data = '{ "topLabel"   : "Аналитические срезы" ,
+                                                                  "bottomLabel": "Кликните по иконке выбора",
+                                                                  "help"       : "Выберите из списка"}'>
+        </input-block>
 
-
-        <div class = 'input_container col-md-3'>
-            <label class = 'input_name'>Статус</label>
-            <label class = 'input_top_label'>Выберите из списка</label>
-            <div>
-                <input class = 'input_in_block' placeholder="Действующий">
-                <label class = 'input_icon'>&nbsp;</label>
-                </input>
-            </div>
-            <label class = 'input_bottom_label'></label>
-        </div>
-
-
-        <div class = 'input_container col-md-3'>
-            <label class = 'input_name'>Автор</label>
-            <label class = 'input_top_label'>Выберите из списка</label>
-            <div>
-                <input class = 'input_in_block' placeholder="Все">
-                <label class = 'input_icon'>&nbsp;</label>
-                </input>
-            </div>
-            <label class = 'input_bottom_label'></label>
-        </div>
-
-    </div>
-    <div class="row">
-
-        <div class = 'input_container col-md-4'>
-            <label class = 'input_name'>Рабочая группа</label>
-            <label class = 'input_top_label'>Выберите из списка</label>
-            <div>
-                <input class = 'input_in_block' placeholder="Все">
-                <label class = 'input_icon'>&nbsp;</label>
-                </input>
-            </div>
-            <label class = 'input_bottom_label'>Кликните по иконке выбора</label>
-        </div>
-
-        <div class = 'input_container col-md-4'>
-            <label class = 'input_name'>Роли контрагентов</label>
-            <label class = 'input_top_label'>Выберите из списка</label>
-            <div>
-                <input class = 'input_in_block' placeholder="Все">
-                <label class = 'input_icon'>&nbsp;</label>
-                </input>
-            </div>
-            <label class = 'input_bottom_label'>Кликните по иконке выбора</label>
-        </div>
-
-
-        <div class = 'input_container col-md-4'>
-            <label class = 'input_name'>Аналитические срезы</label>
-            <label class = 'input_top_label'>Выберите из списка</label>
-            <div>
-                <input class = 'input_in_block' placeholder="Все">
-                <label class = 'input_icon'>&nbsp;</label>
-                </input>
-            </div>
-            <label class = 'input_bottom_label'>Кликните по иконке выбора</label>
-
-        </div>
 
     </div>
 
 
     <div style="padding-top: 20px;" class="row">
-        <div class="col-md-10"></div>
+        <div class="col-md-9"></div>
         <span  class="button round outline"><a icon="trash"></a>Очистить</span>
         <span  class="button round"><a icon="search"></a>Искать</span>
     </div>
+
     <hr>
     <div class="row">
         <div class="col-md-2"><span class="button outline">Номер<a icon = 'arrow' ></a></span></div>
@@ -317,11 +272,7 @@
 </div>
 </div>
 
-<div class="row">
 
-    <input-block class = "col-md-3" data = '{ "topLabel" : "topLabel" ,  "bottomLabel" : "bottomLabel" ,  "help" : "help"}'></input-block>
-    <input-block class = "col-md-3"  data = '{ "topLabel" : "topLabel1" ,  "bottomLabel" : "bottomLabel" ,  "help" : "help"}'></input-block>
-</div>
 
 </body>
 </html>
