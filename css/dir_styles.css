@@ -13,6 +13,7 @@
 
 }
 
+
 :root {
     --black: #333333;
     --silver: #c6cbd4;
@@ -28,8 +29,8 @@ span{
 
 }
 
-body{
-
+header{
+    height:150px;
 }
 
 a{
@@ -200,7 +201,11 @@ h3[accent]{
 }
 
 /* header menu */
-
+top-menu{
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+}
 
 menu.menu_main{
 
@@ -410,13 +415,18 @@ menu.menu_main input{
 .screen{
     position: absolute;
     visibility:hidden;
-    overflow-y:hidden;
-    overflow-x:hidden;
     margin: auto;
-
+    overflow-x:hidden;
     top: 100px; left: 0; bottom: 0; right: 0;
+
 
 
 }
 
+.screen::-webkit-scrollbar { width: 0; }
 
+/* ie 10+ */
+.screen { -ms-overflow-style: none; }
+
+/* фф (свойство больше не работает, других способов тоже нет)*/
+.screen { overflow: -moz-scrollbars-none; }
