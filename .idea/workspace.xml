@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a571220-01e5-4cd4-bad5-26fbe53b13d9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/dir_styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/dir_styles.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,7 +27,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
@@ -54,9 +53,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dir_styles.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dir_styles.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/dir_styles.css">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="284">
+              <caret line="199" column="20" selection-start-line="199" selection-start-column="20" selection-end-line="199" selection-end-column="20" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="bootstrap.css" pinned="false" current-in-tab="false">
@@ -72,8 +75,8 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>icon</find>
       <find>table</find>
+      <find>icon</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -88,6 +91,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/dir_styles.css" />
       </list>
     </option>
   </component>
@@ -168,7 +172,7 @@
       <workItem from="1524147819552" duration="227000" />
       <workItem from="1524148611913" duration="160000" />
       <workItem from="1524149733138" duration="1300000" />
-      <workItem from="1524192853630" duration="1744000" />
+      <workItem from="1524192853630" duration="2293000" />
     </task>
     <task id="LOCAL-00001" summary="Установил поддержку Git для PhpStorm, довольно удобно. Посмотри и сам.">
       <created>1524153535526</created>
@@ -177,11 +181,18 @@
       <option name="project" value="LOCAL" />
       <updated>1524153535528</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Еще один коммит, начало работы с таблицами по счетам.">
+      <created>1524206297364</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1524206297364</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3431000" />
+    <option name="totallyTimeSpent" value="3980000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="732" extended-state="6" />
@@ -216,7 +227,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Установил поддержку Git для PhpStorm, довольно удобно. Посмотри и сам." />
-    <option name="LAST_COMMIT_MESSAGE" value="Установил поддержку Git для PhpStorm, довольно удобно. Посмотри и сам." />
+    <MESSAGE value="Еще один коммит, начало работы с таблицами по счетам." />
+    <option name="LAST_COMMIT_MESSAGE" value="Еще один коммит, начало работы с таблицами по счетам." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html">
@@ -267,9 +279,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/dir_styles.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -298,6 +307,13 @@
             <element signature="n#style#0;n#i#0;n#div#0;n#div#5;n#div#6;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#i#1;n#div#0;n#div#5;n#div#6;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/dir_styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="199" column="20" selection-start-line="199" selection-start-column="20" selection-end-line="199" selection-end-column="20" />
         </state>
       </provider>
     </entry>

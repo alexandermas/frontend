@@ -197,6 +197,7 @@ h3[accent]{
 menu.menu_main{
 
     padding-left: 60px;
+    margin-top: 0px;
     position: relative;
     height: 56px;
     background-color: #333333;
