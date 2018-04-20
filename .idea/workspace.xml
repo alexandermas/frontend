@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a571220-01e5-4cd4-bad5-26fbe53b13d9" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/bootstrap.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/dir_styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/dir_styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,8 +32,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="314" column="3" selection-start-line="314" selection-start-column="3" selection-end-line="314" selection-end-column="3" />
+            <state relative-caret-position="281">
+              <caret line="255" column="50" selection-start-line="255" selection-start-column="50" selection-end-line="255" selection-end-column="50" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="e#2780#2786#1" expanded="true" />
@@ -56,8 +58,8 @@
       <file leaf-file-name="dir_styles.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/dir_styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="199" column="20" selection-start-line="199" selection-start-column="20" selection-end-line="199" selection-end-column="20" />
+            <state relative-caret-position="239">
+              <caret line="287" column="20" selection-start-line="287" selection-start-column="20" selection-end-line="287" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -65,8 +67,8 @@
       <file leaf-file-name="bootstrap.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/bootstrap.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="181" column="5" selection-start-line="181" selection-end-line="181" selection-end-column="5" />
+            <state relative-caret-position="355">
+              <caret line="2281" column="25" selection-start-line="2281" selection-start-column="25" selection-end-line="2281" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -75,8 +77,11 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>table</find>
+      <find>menu</find>
       <find>icon</find>
+      <find>table</find>
+      <find>thead</find>
+      <find>input</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -91,6 +96,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/css/dir_styles.css" />
       </list>
     </option>
@@ -172,7 +178,7 @@
       <workItem from="1524147819552" duration="227000" />
       <workItem from="1524148611913" duration="160000" />
       <workItem from="1524149733138" duration="1300000" />
-      <workItem from="1524192853630" duration="2293000" />
+      <workItem from="1524192853630" duration="3726000" />
     </task>
     <task id="LOCAL-00001" summary="Установил поддержку Git для PhpStorm, довольно удобно. Посмотри и сам.">
       <created>1524153535526</created>
@@ -192,7 +198,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3980000" />
+    <option name="totallyTimeSpent" value="5413000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="732" extended-state="6" />
@@ -281,15 +287,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="181" column="5" selection-start-line="181" selection-end-line="181" selection-end-column="5" />
+        <state relative-caret-position="355">
+          <caret line="2281" column="25" selection-start-line="2281" selection-start-column="25" selection-end-line="2281" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="314" column="3" selection-start-line="314" selection-start-column="3" selection-end-line="314" selection-end-column="3" />
+        <state relative-caret-position="281">
+          <caret line="255" column="50" selection-start-line="255" selection-start-column="50" selection-end-line="255" selection-end-column="50" />
           <folding>
             <element signature="n#style#0;n#input#0;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="e#2780#2786#1" expanded="true" />
@@ -312,8 +318,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/dir_styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="199" column="20" selection-start-line="199" selection-start-column="20" selection-end-line="199" selection-end-column="20" />
+        <state relative-caret-position="239">
+          <caret line="287" column="20" selection-start-line="287" selection-start-column="20" selection-end-line="287" selection-end-column="20" />
         </state>
       </provider>
     </entry>
