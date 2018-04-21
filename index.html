@@ -13,7 +13,12 @@
 
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
     <script defer src="js/prop.js"></script>
+
     <script defer src="js/main.js"></script>
+
+
+    <script  src="js/serialize.js"></script>
+
 
     <!-- верхнее меню -->
 
@@ -169,23 +174,25 @@
         </div>
     </div>
     <hr>
-    <div class="row">
-        <div class="col-md-3"><span class = 'button round'><a icon = 'calendar' ></a>Добавить представление</span></div>
-
-        <div class="col-md-8">
-            <span class = 'button round outline'>Мой 1<a icon = 'calendar' ></a></span>
-            <span class = 'button round outline'>Мой 2<a icon = 'calendar' ></a></span>
-            <span class = 'button round outline'>Мой 3<a icon = 'calendar' ></a></span>
-            <span class = 'button round outline'>Мой 4<a icon = 'calendar' ></a></span>
-            <span class = 'button round outline'>Мой 5<a icon = 'calendar' ></a></span>
-            <span class = 'button round outline'>Мой 6<a icon = 'calendar' ></a></span>
-            <span class = 'button round outline'>Мой 7<a icon = 'calendar' ></a></span>
 
 
+        <div class="row sticky" >
+            <div class="col-md-3"><span class = 'button round'><a icon = 'calendar' ></a>Добавить представление</span></div>
+            <div class="col-md-8">
+                <span class = 'button round outline'>Мой 1<a icon = 'calendar' ></a></span>
+                <span class = 'button round outline'>Мой 2<a icon = 'calendar' ></a></span>
+                <span class = 'button round outline'>Мой 3<a icon = 'calendar' ></a></span>
+                <span class = 'button round outline'>Мой 4<a icon = 'calendar' ></a></span>
+                <span class = 'button round outline'>Мой 5<a icon = 'calendar' ></a></span>
+                <span class = 'button round outline'>Мой 6<a icon = 'calendar' ></a></span>
+                <span class = 'button round outline'>Мой 7<a icon = 'calendar' ></a></span>
+
+
+            </div>
         </div>
 
 
-    </div>
+
     <hr>
 
         <div  class="table-responsive">
@@ -328,6 +335,175 @@
 
                 </tbody>
 
+                <tbody>
+                <tr>
+                    <td class = "col-md-1" rowspan="3" >
+                        <label>
+                            <input class="check" type="checkbox">
+                            <span class="check-custom"></span>
+                            <span class="check-label"></span>
+                        </label>
+
+                    </td>
+
+                    <td>счет 60.02</td>
+                    <td>Активно-пассивный</td>
+                    <td>Счет взаиморасчетов</td>
+                    <td>Является группой</td>
+                    <td>Статьи затрат, Материалы</td>
+                    <td class = "col-md-1 fst" rowspan="3" >*</td>
+                </tr>
+                <tr >
+                    <td class = "col-md-3" rowspan="2" >Расчеты с оператором ЭТП по несостоявшимся аукционам по вине участника</td>
+                    <td class = "col-md-2 sec">балансовый</td>
+                    <td class = "col-md-2 sec">Действующий</td>
+                    <td class = "col-md-2 sec">Подчинен счету 60</td>
+                    <td class = "col-md-2 sec">Глобальный учет, Неглобальный учет</td>
+                </tr>
+                <tr>
+                    <td class = "col-md-2 sec">Счет взаиморасчетов</td>
+                    <td class = "col-md-2 sec">Константинов</td>
+                    <td class = "col-md-2 sec">Покупатель, Продавец</td>
+                    <td></td>
+                </tr>
+
+                </tbody>
+
+                <tbody>
+                <tr>
+                    <td class = "col-md-1" rowspan="3" >
+                        <label>
+                            <input class="check" type="checkbox">
+                            <span class="check-custom"></span>
+                            <span class="check-label"></span>
+                        </label>
+
+                    </td>
+
+                    <td>счет 60.02</td>
+                    <td>Активно-пассивный</td>
+                    <td>Счет взаиморасчетов</td>
+                    <td>Является группой</td>
+                    <td>Статьи затрат, Материалы</td>
+                    <td class = "col-md-1 fst" rowspan="3" >*</td>
+                </tr>
+                <tr >
+                    <td class = "col-md-3" rowspan="2" >Расчеты с оператором ЭТП по несостоявшимся аукционам по вине участника</td>
+                    <td class = "col-md-2 sec">балансовый</td>
+                    <td class = "col-md-2 sec">Действующий</td>
+                    <td class = "col-md-2 sec">Подчинен счету 60</td>
+                    <td class = "col-md-2 sec">Глобальный учет, Неглобальный учет</td>
+                </tr>
+                <tr>
+                    <td class = "col-md-2 sec">Счет взаиморасчетов</td>
+                    <td class = "col-md-2 sec">Константинов</td>
+                    <td class = "col-md-2 sec">Покупатель, Продавец</td>
+                    <td></td>
+                </tr>
+
+                </tbody>
+
+                <tbody>
+                <tr>
+                    <td class = "col-md-1" rowspan="3" >
+                        <label>
+                            <input class="check" type="checkbox">
+                            <span class="check-custom"></span>
+                            <span class="check-label"></span>
+                        </label>
+
+                    </td>
+
+                    <td>счет 60.02</td>
+                    <td>Активно-пассивный</td>
+                    <td>Счет взаиморасчетов</td>
+                    <td>Является группой</td>
+                    <td>Статьи затрат, Материалы</td>
+                    <td class = "col-md-1 fst" rowspan="3" >*</td>
+                </tr>
+                <tr >
+                    <td class = "col-md-3" rowspan="2" >Расчеты с оператором ЭТП по несостоявшимся аукционам по вине участника</td>
+                    <td class = "col-md-2 sec">балансовый</td>
+                    <td class = "col-md-2 sec">Действующий</td>
+                    <td class = "col-md-2 sec">Подчинен счету 60</td>
+                    <td class = "col-md-2 sec">Глобальный учет, Неглобальный учет</td>
+                </tr>
+                <tr>
+                    <td class = "col-md-2 sec">Счет взаиморасчетов</td>
+                    <td class = "col-md-2 sec">Константинов</td>
+                    <td class = "col-md-2 sec">Покупатель, Продавец</td>
+                    <td></td>
+                </tr>
+
+                </tbody>
+
+                <tbody>
+                <tr>
+                    <td class = "col-md-1" rowspan="3" >
+                        <label>
+                            <input class="check" type="checkbox">
+                            <span class="check-custom"></span>
+                            <span class="check-label"></span>
+                        </label>
+
+                    </td>
+
+                    <td>счет 60.02</td>
+                    <td>Активно-пассивный</td>
+                    <td>Счет взаиморасчетов</td>
+                    <td>Является группой</td>
+                    <td>Статьи затрат, Материалы</td>
+                    <td class = "col-md-1 fst" rowspan="3" >*</td>
+                </tr>
+                <tr >
+                    <td class = "col-md-3" rowspan="2" >Расчеты с оператором ЭТП по несостоявшимся аукционам по вине участника</td>
+                    <td class = "col-md-2 sec">балансовый</td>
+                    <td class = "col-md-2 sec">Действующий</td>
+                    <td class = "col-md-2 sec">Подчинен счету 60</td>
+                    <td class = "col-md-2 sec">Глобальный учет, Неглобальный учет</td>
+                </tr>
+                <tr>
+                    <td class = "col-md-2 sec">Счет взаиморасчетов</td>
+                    <td class = "col-md-2 sec">Константинов</td>
+                    <td class = "col-md-2 sec">Покупатель, Продавец</td>
+                    <td></td>
+                </tr>
+
+                </tbody>
+
+                <tbody>
+                <tr>
+                    <td class = "col-md-1" rowspan="3" >
+                        <label>
+                            <input class="check" type="checkbox">
+                            <span class="check-custom"></span>
+                            <span class="check-label"></span>
+                        </label>
+
+                    </td>
+
+                    <td>счет 60.02</td>
+                    <td>Активно-пассивный</td>
+                    <td>Счет взаиморасчетов</td>
+                    <td>Является группой</td>
+                    <td>Статьи затрат, Материалы</td>
+                    <td class = "col-md-1 fst" rowspan="3" >*</td>
+                </tr>
+                <tr >
+                    <td class = "col-md-3" rowspan="2" >Расчеты с оператором ЭТП по несостоявшимся аукционам по вине участника</td>
+                    <td class = "col-md-2 sec">балансовый</td>
+                    <td class = "col-md-2 sec">Действующий</td>
+                    <td class = "col-md-2 sec">Подчинен счету 60</td>
+                    <td class = "col-md-2 sec">Глобальный учет, Неглобальный учет</td>
+                </tr>
+                <tr>
+                    <td class = "col-md-2 sec">Счет взаиморасчетов</td>
+                    <td class = "col-md-2 sec">Константинов</td>
+                    <td class = "col-md-2 sec">Покупатель, Продавец</td>
+                    <td></td>
+                </tr>
+
+                </tbody>
 
             </table>
         </div>

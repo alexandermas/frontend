@@ -2,6 +2,8 @@
 var wnd_last = null;
 var screen = document.getElementsByTagName("top-menu")[0];
 var nodes  = document.querySelectorAll(".screen");
+var bisy   = false;
+
 /*
 var settings = {
     show_animate:'pt-page-scaleUp',
@@ -10,7 +12,8 @@ var settings = {
 */
 var settings = {
     show_animate:'pt-page-moveFromTop',
-    hide_animate:'pt-page-moveToTop'
+    hide_animate:'pt-page-moveToTop',
+    active_screen: null
 };
 
 function init(){
@@ -32,6 +35,7 @@ function init(){
 
                 if(el.classList.contains(settings.show_animate)){
                     // show
+                    make_stiky_wrappers(event.target); // обертки к липким элементам
 
                 }else{
                     // hide
@@ -39,15 +43,19 @@ function init(){
                 }
                 el.classList.remove(settings.show_animate);
                 el.classList.remove(settings.hide_animate);
-
+                bisy = false;
             });
         });
 
     },1);
 
+
+
+
+
 }
 
-init();
+
 
 
 var observer = new MutationObserver(function(mutations) {
@@ -69,10 +77,12 @@ function make_tag(tag, fn){
 
 function show_screen(name) {
     var cur_wnd = null;
+    bisy = true;
     nodes.forEach(function(item, i, arr){
 
         if(item.attributes.sys_name.value == name){
             cur_wnd = item;
+            settings.active_screen = item;
             return;
         }
     });
@@ -87,12 +97,14 @@ function show_screen(name) {
         wnd_last.classList.add(settings.hide_animate);
     }
     // showing called screen
+
     cur_wnd.style.visibility = 'visible';
     cur_wnd.classList.add(settings.show_animate);
     document.body.appendChild(cur_wnd);
 
 
     wnd_last = cur_wnd;
+
 
 }
 
@@ -159,12 +171,100 @@ function input_block(element){
 
 }
 
-
-
-
-
 make_tag("top-menu",top_menu);
 make_tag("input-block",input_block);
 
+/* sticky section */
+function reset_stiky() {
+
+}
+
+function make_stiky_wrappers(screen){
+
+    if(screen.stiky) {
+        window.scrollTo(0, settings.active_screen.scroll_offset);
+        return;
+    }
+
+    screen.stiky     = stiky = {};
+    stiky.tbl = [];
+
+    stiky.next_top      = document.getElementsByTagName('top-menu')[0].getBoundingClientRect().height;
+    stiky.nodes         = screen.querySelectorAll(".sticky");
+
+    if(stiky.nodes.length == 0)
+        return;
+
+    stiky.nodes.forEach(function (item, index, array) {
+        var wrapper          = document.createElement('div');
+        var rect             = item.getBoundingClientRect();
+        wrapper.style.height = rect.height + 'px';
+        stiky.tbl[index]     = rect.y;
+        item.parentNode.replaceChild(wrapper, item);
+        wrapper.appendChild(item);
+    });
+
+    stiky.idx = 0;
+    stiky.node             = stiky.nodes[0];
+    stiky.wrapper          = stiky.node.parentNode;
+
+    console.log(screen.stiky.tbl);
+    console.log(stiky.nodes.length);
+}
+
+var up_lock = true;
+var down_lock = false;
 
 
+window.onscroll = function(ev) {
+        if(bisy || settings.active_screen == null)
+            return;
+
+        settings.active_screen.scroll_offset = window.pageYOffset || document.documentElement.scrollTop;
+
+        var stiky = settings.active_screen.stiky;
+
+
+        console.log(this.scrollY + ' idx:' + stiky.idx + up_lock);
+
+        if(this.oldScroll > this.scrollY){
+            // scroll up
+            while((this.scrollY + stiky.next_top)  < stiky.tbl[stiky.idx] && stiky.idx >= 0 && up_lock == false){
+                var x = stiky.nodes[stiky.idx--].style;
+                stiky.next_top -= 30;
+                x.position = 'relative';
+                x.top = 0 + 'px';
+                console.log('-');
+                down_lock = false;
+                if(stiky.idx <= 0){
+                    stiky.idx = 0
+                    up_lock = true;
+                    stiky.next_top =  document.getElementsByTagName('top-menu')[0].getBoundingClientRect().height;
+                }
+
+            }
+
+        }else{
+           // scroll down
+
+            while(this.scrollY   > (stiky.tbl[stiky.idx] - stiky.next_top ) && stiky.idx <= (stiky.nodes.length - 1) && down_lock == false){
+                var x = stiky.nodes[stiky.idx++].style;
+
+                x.position = 'fixed';
+                x.top      = stiky.next_top + 'px';
+                x.width    = 1300 + 'px';
+               stiky.next_top += 30;
+                up_lock = false;
+               if(stiky.idx == stiky.nodes.length) {
+                   stiky.idx--;
+                   down_lock = true;
+                   console.log('d lock');
+               }
+               console.log('+');
+            }
+        }
+
+        this.oldScroll = this.scrollY;
+}
+
+init();

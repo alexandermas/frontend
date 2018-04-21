@@ -417,9 +417,11 @@ menu.menu_main input{
     visibility:hidden;
     margin: auto;
     overflow-x:hidden;
-    top: 100px; left: 0; bottom: 0; right: 0;
-
-
+/*    top: 100px; left: 0; bottom: 0; right: 0;*/
+    width: 100%;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 100px;
 
 }
 
@@ -458,9 +460,16 @@ tbody:nth-child(odd){
 
 
 .screen::-webkit-scrollbar { width: 0; }
-
-/* ie 10+ */
 .screen { -ms-overflow-style: none; }
 
-/* фф (свойство больше не работает, других способов тоже нет)*/
 .screen { overflow: -moz-scrollbars-none; }
+/*  glue */
+.sticky{
+z-index: 9999;
+
+}
+
+.sticky-content.fixed{
+    position: fixed;
+
+}
