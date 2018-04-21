@@ -87,14 +87,17 @@ input + label {
     border: solid 1px #000000;
 }
 
+a[icon]{
+    font-weight: 300;
+    color: #4b74ff;
+    text-decoration: none;
+}
 
 a[icon = 'search']:before{
     color: black;
     font-family: FontAwesome;
     content: " \f002";
 }
-
-
 
 
 a[icon = 'arrow']:before{
@@ -153,9 +156,36 @@ a[icon = 'print']:before{
     content: " \f02f";
 }
 
+a[icon = 'PlusCircle']:before{
+
+    font-family: FontAwesome;
+    padding-right:5px;
+    content: " \f055";
+}
+
+a[icon = 'CtxMenu']:before{
+
+    font-family: FontAwesome;
+    padding-right:5px;
+    content: " \f142";
+}
+
+a[icon = 'filter']:before{
+
+    font-family: FontAwesome;
+    padding-right:5px;
+    content: " \f0b0";
+}
+
+a[icon = 'save']:before{
+
+    font-family: FontAwesome;
+    padding-right:5px;
+    content: " \f0c7";
 
 a[icon]:hover{
     font-weight: 300;
+    color: #c6cbd4;
 }
 
 .round{
