@@ -88,70 +88,174 @@ input + label {
 }
 
 
-a[icon = 'search']:before{
-    color: black;
+
+a[icon = 'Edit']:before{
     font-family: FontAwesome;
-    content: " \f002";
+    padding-right:5px;
+    content: " \f303";
 }
 
+a[icon = 'Flag']:before{
+    color: black;
+    font-family: FontAwesome;
+    content: " \f024";
+}
 
+a[icon = 'Trash']:before{
+    font-family: FontAwesome;
+    padding-right:5px;
+    content: " \f1f8";
+}
 
-
-a[icon = 'arrow']:before{
+a[icon = 'Print']:before{
 
     font-family: FontAwesome;
     padding-right:5px;
-    content: " \f068";
+    content: " \f02f";
 }
 
-a[icon = 'calendar']:before{
+a[icon = 'Search']:before{
+
+    font-family: FontAwesome;
+    padding-right:5px;
+    content: " \f002";
+}
+
+a[icon = 'Calendar']:before{
 
     font-family: FontAwesome;
     padding-right:5px;
     content: " \f073";
 }
 
-a[icon = 'plus']:before{
+a[icon = 'Plus']:before{
 
     font-family: FontAwesome;
     padding-right:5px;
     content: " \f067";
 }
 
-a[icon = 'minus']:before{
+a[icon = 'Minus']:before{
 
     font-family: FontAwesome;
     padding-right:5px;
     content: " \f068";
 }
 
-a[icon = 'edit']:before{
+a[icon = 'ArrowUp']:before{
 
     font-family: FontAwesome;
     padding-right:5px;
-    content: " \f303";
+    content: " \f308";
 }
 
-a[icon = 'flag']:before{
+
+a[icon = 'ArrowDown']:before{
 
     font-family: FontAwesome;
     padding-right:5px;
-    content: " \f024";
+    content: " \f309";
 }
 
-a[icon = 'trash']:before{
+
+a[icon = 'Filter']:before{
 
     font-family: FontAwesome;
     padding-right:5px;
-    content: " \f1f8";
+    content: " \f0b0";
 }
 
-a[icon = 'print']:before{
+
+a[icon = 'CaretUp']:before{
+    font-family: FontAwesome;
+    padding-right:5px;
+    content: " \f0d7";
+}
+
+
+a[icon = 'CaretDown']:before{
 
     font-family: FontAwesome;
     padding-right:5px;
-    content: " \f02f";
+    content: " \f0d8";
 }
+
+a[icon = 'SortNumDown']:before{
+
+    font-family: FontAwesome;
+    padding-right:5px;
+    content: " \f162";
+}
+
+
+a[icon = 'SortNumUp']:before{
+
+    font-family: FontAwesome;
+    padding-right:5px;
+    content: " \f163";
+}
+
+
+a[icon = 'SortAlphaDown']:before{
+
+    font-family: FontAwesome;
+    padding-right:5px;
+    content: " \f15d";
+}
+
+
+a[icon = 'SortAlphaUp']:before{
+
+    font-family: FontAwesome;
+    padding-right:5px;
+    content: " \f15e";
+}
+
+a[icon = 'SortAmountDown']:before{
+
+    font-family: FontAwesome;
+    padding-right:5px;
+    content: " \f160";
+}
+
+a[icon = 'SortAmountUp']:before{
+
+    font-family: FontAwesome;
+    padding-right:5px;
+    content: " \f161";
+}
+
+a[icon = 'CtxMenu']:before{
+
+    font-family: FontAwesome;
+    padding-right:5px;
+    content: " \f142";
+}
+
+a[icon = 'PlusCircle']:before{
+
+    font-family: FontAwesome;
+    padding-right:5px;
+    content: " \f055";
+}
+
+a[icon = 'ExchangeAlt']:before{
+
+    font-family: FontAwesome;
+    padding-right:5px;
+    content: " \f362";
+}
+
+a[icon = 'Save']:before{
+
+    font-family: FontAwesome;
+    padding-right:5px;
+    content: " \f161";
+}
+
+
+
+
 
 
 a[icon]:hover{
