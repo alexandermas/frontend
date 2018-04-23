@@ -25,10 +25,7 @@ function init(){
         'animation' : 'animationend'
     };
     var evt_name = animEndEventNames[ Modernizr.prefixed( 'animation' ) ];
-
-
-    setTimeout(function () {
-        nodes.forEach(function (item, i, arr){
+    nodes.forEach(function (item, i, arr){
             document.body.removeChild(item);
             item.addEventListener(evt_name, function (event) {
                 var el = event.target;
@@ -46,13 +43,6 @@ function init(){
                 bisy = false;
             });
         });
-
-    },1);
-
-
-
-
-
 }
 
 
@@ -120,16 +110,14 @@ function top_menu(element){
                 "<span class = 'menu_main_item_inactive'>" + item.label + "</span> " +
                 "</label>";
         });
-        element.innerHTML = html;
+        element.insertAdjacentHTML('beforeend', html);
     }
     observer.observe(element, xxx);
 
     element.addEventListener("click", function(event){
         var evt = event.target.attributes.sys_name;
         if(evt)
-
-                show_screen(evt.value);
-
+            show_screen(evt.value);
     }
     );
 
@@ -150,9 +138,7 @@ function input_block(element){
                        "<label class = 'input_top_label'>" + data.help + "</label>" +
                        "<input class = 'input_in_block'></input> "+
                        "<label class = 'input_bottom_label'>" + data.bottomLabel + "</label> </div>";
-
-            element.innerHTML = html;
-
+             element.insertAdjacentHTML('beforeend',html);
            // _input_block = element;
 
     } else{
@@ -219,14 +205,8 @@ var down_lock = false;
 window.onscroll = function(ev) {
         if(bisy || settings.active_screen == null)
             return;
-
         settings.active_screen.scroll_offset = window.pageYOffset || document.documentElement.scrollTop;
-
         var stiky = settings.active_screen.stiky;
-
-
-        console.log(this.scrollY + ' idx:' + stiky.idx + up_lock);
-
         if(this.oldScroll > this.scrollY){
             // scroll up
             while((this.scrollY + stiky.next_top)  < stiky.tbl[stiky.idx] && stiky.idx >= 0 && up_lock == false){
@@ -241,12 +221,9 @@ window.onscroll = function(ev) {
                     up_lock = true;
                     stiky.next_top =  document.getElementsByTagName('top-menu')[0].getBoundingClientRect().height;
                 }
-
             }
-
         }else{
            // scroll down
-
             while(this.scrollY   > (stiky.tbl[stiky.idx] - stiky.next_top ) && stiky.idx <= (stiky.nodes.length - 1) && down_lock == false){
                 var x = stiky.nodes[stiky.idx++].style;
 
@@ -263,7 +240,6 @@ window.onscroll = function(ev) {
                console.log('+');
             }
         }
-
         this.oldScroll = this.scrollY;
 }
 

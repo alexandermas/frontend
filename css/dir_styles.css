@@ -87,17 +87,14 @@ input + label {
     border: solid 1px #000000;
 }
 
-a[icon]{
-    font-weight: 300;
-    color: #4b74ff;
-    text-decoration: none;
-}
 
 a[icon = 'search']:before{
     color: black;
     font-family: FontAwesome;
     content: " \f002";
 }
+
+
 
 
 a[icon = 'arrow']:before{
@@ -156,36 +153,9 @@ a[icon = 'print']:before{
     content: " \f02f";
 }
 
-a[icon = 'PlusCircle']:before{
-
-    font-family: FontAwesome;
-    padding-right:5px;
-    content: " \f055";
-}
-
-a[icon = 'CtxMenu']:before{
-
-    font-family: FontAwesome;
-    padding-right:5px;
-    content: " \f142";
-}
-
-a[icon = 'filter']:before{
-
-    font-family: FontAwesome;
-    padding-right:5px;
-    content: " \f0b0";
-}
-
-a[icon = 'save']:before{
-
-    font-family: FontAwesome;
-    padding-right:5px;
-    content: " \f0c7";
 
 a[icon]:hover{
     font-weight: 300;
-    color: #c6cbd4;
 }
 
 .round{
@@ -443,15 +413,20 @@ menu.menu_main input{
 
 
 .screen{
-    position: absolute;
+    /*
+    position: relative;
     visibility:hidden;
     margin: auto;
     overflow-x:hidden;
-/*    top: 100px; left: 0; bottom: 0; right: 0;*/
+//    top: 100px; left: 0; bottom: 0; right: 0;
     width: 100%;
     padding-left: 20%;
     padding-right: 20%;
     padding-top: 100px;
+    */
+    top:100px;
+    height: 100%;
+    z-index: 100;
 
 }
 
@@ -502,4 +477,7 @@ z-index: 9999;
 .sticky-content.fixed{
     position: fixed;
 
+}
+.xxx{
+    height: 100px;
 }
